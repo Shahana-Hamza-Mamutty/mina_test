@@ -1,0 +1,9 @@
+<p>items</p>
+<% @i.each do |f| %> 
+<% f.items.each do |y| %>
+
+<p><%= y.itemname %>
+<p><%= y.price %>
+<% end %>
+<!--<p><%= f.id %></p> -->
+<% end %>

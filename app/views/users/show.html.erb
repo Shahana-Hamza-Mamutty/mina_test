@@ -1,0 +1,16 @@
+<%= @u.name %></br>
+<%= @u.age %></br>
+<%= @u.email %></br>
+<%= image_tag @u.avatar.url(:medium) %></br>
+<%= link_to 'Download', controller: "users", action: "download", id: @u %>
+<h2>Customers</h2>
+<%  @u.customers.each do |c| %>
+<%= link_to c.name, controller: "users", action: "customer_orders", id: c%></br>
+<!-- <p><%= c.name %></p> -->
+<p><%= c.email %></p>
+<p><%= c.age %></p>
+<%= link_to "Edit", controller: "users", action: "new_edit" , id: c %>
+<% end %>
+<%= link_to "Create PDF", controller: "users", action: "index_pdf", id: @u, :format => :pdf%>
+
+<a href="#" onclick="window.print();return false;">print me</a> 

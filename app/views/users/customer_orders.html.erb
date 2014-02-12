@@ -1,0 +1,5 @@
+<p>orders</p>
+<% @o.each do |f| %> 
+<%= link_to f.id, controller: "users", action: "customer_items", id: f %>
+<!--<p><%= f.id %></p> -->
+<% end %>

@@ -1,0 +1,11 @@
+
+<%= form_for @k , url: new_update_user_path(@k) do |f| %>
+ <!-- <%= f %> -->
+  <%= f.label :Name %>
+  <%= f.text_field :name %>
+  <%= f.label :Email %>
+  <%= f.text_field :email %>
+  <%= f.label :Age %>
+  <%= f.text_field :age %>
+  <%= f.submit "Edit" %>
+<% end %>
